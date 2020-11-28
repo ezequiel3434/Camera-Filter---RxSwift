@@ -20,11 +20,14 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="672"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sga-mT-Boc">
-                                <rect key="frame" x="168" y="804" width="78" height="30"/>
+                                <rect key="frame" x="168" y="816" width="78" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <state key="normal" title="Apply Filter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="applyFilterButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="OX0-eL-d7P"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -34,9 +37,9 @@
                             <constraint firstItem="sga-mT-Boc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oi1-Z0-zZE"/>
                             <constraint firstItem="6wx-7I-AYH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZRk-aZ-Srz"/>
                             <constraint firstItem="6wx-7I-AYH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fxG-5D-lfV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sga-mT-Boc" secondAttribute="bottom" constant="16" id="l58-Me-pCD"/>
                             <constraint firstItem="6wx-7I-AYH" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="rvi-MZ-ITe"/>
                             <constraint firstItem="6wx-7I-AYH" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.75" id="t9Z-uz-8wX"/>
-                            <constraint firstItem="sga-mT-Boc" firstAttribute="top" secondItem="6wx-7I-AYH" secondAttribute="bottom" constant="44" id="tBb-qN-48R"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Camera Filter" id="7mN-jl-BN0">
@@ -47,6 +50,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="applyFilterButton" destination="sga-mT-Boc" id="86D-Bi-uO4"/>
                         <outlet property="photoImageView" destination="6wx-7I-AYH" id="1vK-p1-i8A"/>
                     </connections>
                 </viewController>
